@@ -34,6 +34,7 @@
             this.LbPassword = new System.Windows.Forms.Label();
             this.BtnLogin = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +83,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BtnCancel);
             this.groupBox1.Controls.Add(this.BtnLogin);
             this.groupBox1.Controls.Add(this.TbUsername);
             this.groupBox1.Controls.Add(this.LbPassword);
@@ -93,6 +95,15 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
+            // 
+            // BtnCancel
+            // 
+            this.BtnCancel.Location = new System.Drawing.Point(52, 98);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancel.TabIndex = 5;
+            this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.UseVisualStyleBackColor = true;
             // 
             // fmLogin
             // 
@@ -116,6 +127,7 @@
         private System.Windows.Forms.Label LbPassword;
         private System.Windows.Forms.Button BtnLogin;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button BtnCancel;
     }
 }
 
