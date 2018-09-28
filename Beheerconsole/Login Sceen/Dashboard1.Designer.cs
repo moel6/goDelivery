@@ -1,6 +1,6 @@
-﻿namespace Dashboard
+﻿namespace Login_Sceen
 {
-    partial class Dashboard
+    partial class Dashboard1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Dashboard1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Name = "Dashboard1";
+            this.Text = "Dashboard1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Dashboard1_FormClosed_1);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Dashboard
+namespace Login_Sceen
 {
-    public partial class Dashboard : Form
+    public partial class Dashboard1 : Form
     {
-        public Dashboard()
+        public Dashboard1()
         {
             InitializeComponent();
+        }
+
+        private void Dashboard1_FormClosed_1(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

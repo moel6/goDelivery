@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TbUsername = new System.Windows.Forms.TextBox();
-            this.TbPassword = new System.Windows.Forms.TextBox();
+            this.tbUsername = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.LbUsername = new System.Windows.Forms.Label();
             this.LbPassword = new System.Windows.Forms.Label();
             this.BtnLogin = new System.Windows.Forms.Button();
@@ -38,20 +38,20 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TbUsername
+            // tbUsername
             // 
-            this.TbUsername.Location = new System.Drawing.Point(108, 32);
-            this.TbUsername.Name = "TbUsername";
-            this.TbUsername.Size = new System.Drawing.Size(100, 20);
-            this.TbUsername.TabIndex = 0;
+            this.tbUsername.Location = new System.Drawing.Point(108, 32);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(100, 20);
+            this.tbUsername.TabIndex = 0;
             // 
-            // TbPassword
+            // tbPassword
             // 
-            this.TbPassword.Location = new System.Drawing.Point(108, 62);
-            this.TbPassword.Name = "TbPassword";
-            this.TbPassword.PasswordChar = '*';
-            this.TbPassword.Size = new System.Drawing.Size(100, 20);
-            this.TbPassword.TabIndex = 1;
+            this.tbPassword.Location = new System.Drawing.Point(108, 62);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(100, 20);
+            this.tbPassword.TabIndex = 1;
             // 
             // LbUsername
             // 
@@ -79,15 +79,15 @@
             this.BtnLogin.TabIndex = 4;
             this.BtnLogin.Text = "Inloggen";
             this.BtnLogin.UseVisualStyleBackColor = true;
-            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click_1);
+            this.BtnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.BtnCancel);
             this.groupBox1.Controls.Add(this.BtnLogin);
-            this.groupBox1.Controls.Add(this.TbUsername);
+            this.groupBox1.Controls.Add(this.tbUsername);
             this.groupBox1.Controls.Add(this.LbPassword);
-            this.groupBox1.Controls.Add(this.TbPassword);
+            this.groupBox1.Controls.Add(this.tbPassword);
             this.groupBox1.Controls.Add(this.LbUsername);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -104,6 +104,7 @@
             this.BtnCancel.TabIndex = 5;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // fmLogin
             // 
@@ -121,8 +122,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TbUsername;
-        private System.Windows.Forms.TextBox TbPassword;
+        private System.Windows.Forms.TextBox tbUsername;
+        private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label LbUsername;
         private System.Windows.Forms.Label LbPassword;
         private System.Windows.Forms.Button BtnLogin;

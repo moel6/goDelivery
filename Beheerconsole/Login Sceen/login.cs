@@ -17,10 +17,12 @@ namespace Login_Sceen
             InitializeComponent();
         }
 
-        private void BtnLogin_Click_1(object sender, EventArgs e)
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
+            string userName = "user";
+            string passWord = "pass";
 
-            if (TbUsername.Text == "" || TbPassword.Text == "")
+            if (tbUsername.Text == "" || tbPassword.Text == "")
             {
                 MessageBox.Show("Gebruikersnaam of wachtwoord is niet ingevuld.");
             }
@@ -28,18 +30,26 @@ namespace Login_Sceen
             else
             {
 
-                if ((TbUsername.Text == "username") & (TbPassword.Text == "password"))
+                if ((tbUsername.Text == userName ) & (tbPassword.Text == passWord))
                 {
                     MessageBox.Show("Juiste inloggegevens");
+                    InitializeComponent();
+                    var Dashboard = new Dashboard1();
+                    Dashboard.Show();
+                    this.Hide();
                 }
                 else
                 {
                     MessageBox.Show("Onjuiste inloggegevens");
-                    TbUsername.Text = "";
-                    TbPassword.Text = "";
-
+                    tbUsername.Text = "";
+                    tbPassword.Text = "";
                 }
             }
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
         }
     }
 }
