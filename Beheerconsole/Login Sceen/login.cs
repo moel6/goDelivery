@@ -13,7 +13,6 @@ namespace Login_Sceen
 {
     public partial class fmLogin : Form
     {
-
         // Zet MySQL Connectie op LET OP: Nu op localhost)
         MySqlConnection conn = new MySqlConnection(@"Server=localhost;  Uid=root; Database=dbi422354; Pwd=;SslMode=none");
 
