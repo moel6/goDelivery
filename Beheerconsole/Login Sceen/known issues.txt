@@ -1,0 +1,6 @@
+
+Musts 
+- Administratiemodule updaten na insert. 
+- Resultaten verwijderen
+- Resultaten updaten. 
+

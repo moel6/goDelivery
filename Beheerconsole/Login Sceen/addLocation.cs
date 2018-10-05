@@ -18,7 +18,6 @@ namespace Login_Sceen
     {
         MySqlConnection conn = new MySqlConnection(@"Server=localhost;  Uid=root; Database=dbi422354; Pwd=;SslMode=none");
 
-
         public AddLocation()
         {
             InitializeComponent();
@@ -26,15 +25,54 @@ namespace Login_Sceen
 
         private void BtnLocationSub_Click(object sender, EventArgs e)
         {
-            if (NubNumber.Value == 0 || CbColor.Text == "")
+            string username = tbUsername.Text;
+            string password = tbPassword.Text;
+            string role = cbRole.Text;
+            string number = Convert.ToString(nubNumber.Value);
+            string color = cbColor.Text;
+
+            // Genereerd aanmaaktijd. 
+            string timeAndDate = DateTime.Now.ToString("MM/dd/yyyy h:mm tt");
+
+            // Query voor het invoegen van waarden uit formulier.
+            string insertQuery = 
+                "INSERT INTO account (account.username, account.password, account.rol, account.account_sinds) VALUES('"+username+"', '"+password + "', '"+ role + "', '"+timeAndDate+"');" +
+                "INSERT INTO administratie(administratie.account_id_account, administratie.appartmentnummer, administratie.kleur)" +
+                "VALUES(LAST_INSERT_ID(), '"+number+ "', '"+color+ "'); ";
+
+            if (username == "" || password == "" || role == "" || number =="" || color == "")
             {
-                MessageBox.Show("Vul de locatie in en kies de juiste kleur");
+                MessageBox.Show("Controleer de gegevens, een of meerdere velden zijn niet juist ingevuld","Onvolledige gegevens");
             }
             else
             {
-              // conn.Open();
+                conn.Open();
+                MySqlCommand insert = new MySqlCommand(insertQuery, conn);
 
+                try
+                {
+                    if (insert.ExecuteNonQuery() == 2)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Not Inserted");
+                    }
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Overige fout");
+                }
+                conn.Close();
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
