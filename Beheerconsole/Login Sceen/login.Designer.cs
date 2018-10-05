@@ -79,7 +79,7 @@
             this.BtnLogin.TabIndex = 4;
             this.BtnLogin.Text = "Inloggen";
             this.BtnLogin.UseVisualStyleBackColor = true;
-            this.BtnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click_1);
             // 
             // groupBox1
             // 

@@ -22,6 +22,12 @@ namespace Login_Sceen
             Application.Exit();
         }
 
-
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            // laat formulier zien
+            InitializeComponent();
+            var FormLocation = new AddLocation();
+            FormLocation.Show();
+        }
     }
 }
