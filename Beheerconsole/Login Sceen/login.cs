@@ -23,6 +23,7 @@ namespace Login_Sceen
 
         private void BtnLogin_Click_1(object sender, EventArgs e)
         {
+            // invoer van textboxes en rol moet "admin" zijn in database. Om te voorkomen dat bewoners in het adminpanel kunnen. 
             string username = tbUsername.Text;
             string password = tbPassword.Text;
             string role = "admin";
@@ -33,13 +34,14 @@ namespace Login_Sceen
             loginCheck.Fill(dtAccounts);
             conn.Close(); 
 
-
+            // Controleer of beide textvelden zijn ingevuld. 
             if (tbUsername.Text == "" || tbPassword.Text == "")
             {
               MessageBox.Show("Gebruikersnaam of wachtwoord is niet ingevuld.","Geen Gegevens");
             }
             else
             {
+                // Als gegevens juist zijn laat het dashboard zien
                 if (dtAccounts.Rows[0][0].ToString() == "1") 
                 {
                     MessageBox.Show("Juiste inloggegevens");
@@ -50,6 +52,7 @@ namespace Login_Sceen
                 }
                 else
                 {
+                    // Als gegevens onjuist zijn geef een foutmelding en maak textboxes leeg.
                     MessageBox.Show("Onjuiste inloggegevens of machtigingen", "Onjuiste gegevens");
                     tbUsername.Text = "";
                     tbPassword.Text = "";
@@ -59,6 +62,7 @@ namespace Login_Sceen
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
+            // Indien er op de cancel button geklikt wordt. Sluit dan het venster. 
             this.Close(); 
         }
     }

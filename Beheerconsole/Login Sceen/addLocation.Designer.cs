@@ -90,7 +90,7 @@
             this.cbRole.FormattingEnabled = true;
             this.cbRole.Items.AddRange(new object[] {
             "Bewoner",
-            "Administrator"});
+            "admin"});
             this.cbRole.Location = new System.Drawing.Point(110, 81);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(100, 21);

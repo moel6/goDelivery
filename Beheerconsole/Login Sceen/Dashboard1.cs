@@ -14,6 +14,7 @@ namespace Login_Sceen
     public partial class Dashboard1 : Form
     {
 
+        // Connectiegegevens voor database
         MySqlConnection conn = new MySqlConnection(@"Server=localhost;  Uid=root; Database=dbi422354; Pwd=;SslMode=none");
      
         public Dashboard1()
@@ -21,8 +22,10 @@ namespace Login_Sceen
             InitializeComponent();
         }
 
+
         private void Dashboard1_FormClosed_1(object sender, FormClosedEventArgs e)
         {
+            // Sluit applicatie als er op kruisje wordt geklikt. 
             Application.Exit();
         }
 
@@ -35,32 +38,58 @@ namespace Login_Sceen
 
         private void Dashboard1_Load_1(object sender, EventArgs e)
         {
+            // Inladen van data in de datagridview op het tabblad administratie.
             MySqlDataAdapter showFromDatabase = new MySqlDataAdapter("SELECT account.id_account,account.username, account.rol, administratie.appartmentnummer, administratie.kleur FROM account INNER JOIN administratie ON account_id_account = account.id_account", conn);
             DataSet administratieGegevens = new DataSet();
             showFromDatabase.Fill(administratieGegevens);
             dataGridView1.DataSource = administratieGegevens.Tables[0];
         }
 
-        private void dataGridView1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void BtnRemove_Click(object sender, EventArgs e)
         {
+            // Geef een bevestiging bij het verwijderen. Als er op "Ja" geklikt is wordt het record verwijderd als er op "nee" geklikt wordt gebeurd er niks.
+            // LET OP: ID moet nog worden meegegeven zodat juiste result wordt verwijderd. 
+
+            int recordId = 28;
+
             DialogResult Remove;
             Remove = MessageBox.Show("Weet u zeker dat u dit item wilt verwijderen?", "Bevestiging Verwijderen", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (Remove == DialogResult.OK)
             {
-                // SQL =actie verwijderen op basis van ID
+                string updateQuery = "DELETE FROM administratie WHERE administratie.account_id_account = '"+recordId+"';" +
+                "DELETE FROM account WHERE account.id_account = '"+recordId+"'; "; 
+
+                conn.Open();
+                MySqlCommand update = new MySqlCommand(updateQuery, conn);
+
+                try
+                {
+                    if (update.ExecuteNonQuery() == 2)
+                    {
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Onjuist ID geselecteerd, Er is geen data veranderd.");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+                conn.Close();
             }
             else
             {
-                // doe niks.
+               // Doe niets als er op "No" wordt geklikt
             }
         }
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
+            // Open het edit formulier als er dubbelklik gedaan wordt op de juiste rij
             editLocation FormEdit = new editLocation();
 
             FormEdit.ShowDialog();

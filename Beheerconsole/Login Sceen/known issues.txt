@@ -1,6 +1,8 @@
 
-Musts 
+Musts:
 - Administratiemodule updaten na insert. 
-- Resultaten verwijderen
-- Resultaten updaten. 
+- Resultaten verwijderen op basis van ID. 
+- Resultaten updaten op basis van ID.
 
+Coulds:
+- Beveiligingsmelding bij aanmaken administrator. 
