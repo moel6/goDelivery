@@ -70,6 +70,7 @@ namespace Login_Sceen
                 MessageBox.Show(ex.Message);
             }
             conn.Close();
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

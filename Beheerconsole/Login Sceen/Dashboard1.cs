@@ -23,6 +23,16 @@ namespace Login_Sceen
         }
 
 
+        // Functie voor het ophalen van data vanuit database. 
+        void PopulateData()
+        {
+            MySqlDataAdapter showFromDatabase = new MySqlDataAdapter("SELECT account.id_account,account.username, account.rol, administratie.appartmentnummer, administratie.kleur FROM account INNER JOIN administratie ON account_id_account = account.id_account", conn);
+            DataSet administratieGegevens = new DataSet();
+            showFromDatabase.Fill(administratieGegevens);
+            dataGridView1.DataSource = administratieGegevens.Tables[0];
+            conn.Close(); 
+        }
+
         private void Dashboard1_FormClosed_1(object sender, FormClosedEventArgs e)
         {
             // Sluit applicatie als er op kruisje wordt geklikt. 
@@ -39,10 +49,7 @@ namespace Login_Sceen
         private void Dashboard1_Load_1(object sender, EventArgs e)
         {
             // Inladen van data in de datagridview op het tabblad administratie.
-            MySqlDataAdapter showFromDatabase = new MySqlDataAdapter("SELECT account.id_account,account.username, account.rol, administratie.appartmentnummer, administratie.kleur FROM account INNER JOIN administratie ON account_id_account = account.id_account", conn);
-            DataSet administratieGegevens = new DataSet();
-            showFromDatabase.Fill(administratieGegevens);
-            dataGridView1.DataSource = administratieGegevens.Tables[0];
+            PopulateData(); 
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)
@@ -91,8 +98,13 @@ namespace Login_Sceen
         {
             // Open het edit formulier als er dubbelklik gedaan wordt op de juiste rij
             editLocation FormEdit = new editLocation();
-
             FormEdit.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            // haal data opnieuw op zodra er op de knop update wordt geklikt
+            PopulateData();
         }
     }
     }
