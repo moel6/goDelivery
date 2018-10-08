@@ -1,6 +1,6 @@
 ﻿namespace Login_Sceen
 {
-    partial class AddLocation
+    partial class editLocation
     {
         /// <summary>
         /// Required designer variable.
@@ -62,7 +62,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(479, 193);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vul de benodige gegevens in";
             // 
@@ -181,14 +181,15 @@
             this.LbHouseNumber.TabIndex = 3;
             this.LbHouseNumber.Text = "Huisnummer";
             // 
-            // AddLocation
+            // editLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 206);
+            this.ClientSize = new System.Drawing.Size(547, 246);
             this.Controls.Add(this.groupBox1);
-            this.Name = "AddLocation";
-            this.Text = "Locatie toevoegen";
+            this.Name = "editLocation";
+            this.Text = "Bewerk";
+            this.Load += new System.EventHandler(this.editLocation_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nubNumber)).EndInit();
@@ -199,17 +200,17 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button BtnLocationSub;
-        private System.Windows.Forms.NumericUpDown nubNumber;
-        private System.Windows.Forms.ComboBox cbColor;
-        private System.Windows.Forms.Label LbColor;
-        private System.Windows.Forms.Label LbHouseNumber;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbRole;
+        public System.Windows.Forms.ComboBox cbRole;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelss;
-        private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.TextBox tbUsername;
-        private System.Windows.Forms.Button btnCancel;
+        public System.Windows.Forms.TextBox tbPassword;
+        public System.Windows.Forms.TextBox tbUsername;
+        private System.Windows.Forms.Button BtnLocationSub;
+        public System.Windows.Forms.NumericUpDown nubNumber;
+        public System.Windows.Forms.ComboBox cbColor;
+        private System.Windows.Forms.Label LbColor;
+        private System.Windows.Forms.Label LbHouseNumber;
     }
 }

@@ -61,10 +61,10 @@ namespace Login_Sceen
                     }
 
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
 
-                    MessageBox.Show("Overige fout");
+                    MessageBox.Show(ex.Message);
                 }
                 conn.Close();
             }
