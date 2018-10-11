@@ -1,6 +1,6 @@
 ﻿namespace Login_Sceen
 {
-    partial class AddLocation
+    partial class frmAddLocation
     {
         /// <summary>
         /// Required designer variable.
@@ -87,10 +87,11 @@
             // 
             // cbRole
             // 
+            this.cbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRole.FormattingEnabled = true;
             this.cbRole.Items.AddRange(new object[] {
-            "Bewoner",
-            "admin"});
+            "bewoner",
+            "administrator"});
             this.cbRole.Location = new System.Drawing.Point(110, 81);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(100, 21);
@@ -118,6 +119,7 @@
             // 
             this.tbPassword.Location = new System.Drawing.Point(110, 55);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(100, 20);
             this.tbPassword.TabIndex = 1;
             // 
@@ -152,12 +154,13 @@
             // 
             // cbColor
             // 
+            this.cbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbColor.FormattingEnabled = true;
             this.cbColor.Items.AddRange(new object[] {
-            "Rood",
-            "Geel",
-            "Blauw",
-            "Groen"});
+            "rood",
+            "geel",
+            "blauw",
+            "groen"});
             this.cbColor.Location = new System.Drawing.Point(320, 51);
             this.cbColor.Name = "cbColor";
             this.cbColor.Size = new System.Drawing.Size(100, 21);
@@ -181,13 +184,13 @@
             this.LbHouseNumber.TabIndex = 3;
             this.LbHouseNumber.Text = "Huisnummer";
             // 
-            // AddLocation
+            // frmAddLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 206);
             this.Controls.Add(this.groupBox1);
-            this.Name = "AddLocation";
+            this.Name = "frmAddLocation";
             this.Text = "Locatie toevoegen";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

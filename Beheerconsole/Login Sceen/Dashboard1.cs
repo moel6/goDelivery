@@ -14,7 +14,7 @@ using EV3WifiLib;
 
 namespace Login_Sceen
 {
-    public partial class Dashboard1 : Form
+    public partial class FrmDashboard : Form
     {
         private EV3Wifi myEV3;
         private Timer messageReceiveTimer;
@@ -22,7 +22,7 @@ namespace Login_Sceen
         // Connectiegegevens voor database
         MySqlConnection conn = new MySqlConnection(@"Server=localhost;  Uid=root; Database=dbi422354; Pwd=;SslMode=none");
 
-        public Dashboard1()
+        public FrmDashboard()
         {
             InitializeComponent();
             // Create the Timer object and set it to generate a timer tick event 
@@ -40,7 +40,7 @@ namespace Login_Sceen
         }
 
         // Functie voor het ophalen van data vanuit database. 
-        void PopulateData()
+        public void PopulateData()
         {
             MySqlDataAdapter showFromDatabase = new MySqlDataAdapter("SELECT account.id_account,account.username, account.rol, administratie.appartmentnummer, administratie.kleur FROM account INNER JOIN administratie ON account_id_account = account.id_account", conn);
             DataSet administratieGegevens = new DataSet();
@@ -48,7 +48,6 @@ namespace Login_Sceen
             dataGridView1.DataSource = administratieGegevens.Tables[0];
             conn.Close();
         }
-
 
         // update connectieinformatie binnen gehele applicatie
         private void UpdateButtonsAndConnectionInfo()
@@ -73,7 +72,6 @@ namespace Login_Sceen
                 libDebug.Items.Add(disconnectedDebug);
             }
         }
-
             
         // Sluit applicatie als er op kruisje wordt geklikt
         private void Dashboard1_FormClosed_1(object sender, FormClosedEventArgs e)
@@ -81,11 +79,12 @@ namespace Login_Sceen
             Application.Exit();
         }
 
+        // laat het formulier zien waarbij gegevens worden toegevoegd. 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            // laat formulier zien
-            var FormLocation = new AddLocation();
-            FormLocation.Show();
+            frmAddLocation frmAddLocation = new frmAddLocation();
+            frmAddLocation.Show();
+            frmAddLocation.dashboard = this;
         }
 
         private void Dashboard1_Load_1(object sender, EventArgs e)
@@ -94,13 +93,9 @@ namespace Login_Sceen
             PopulateData();
         }
 
+            // Controleer op welke rij is geklikt, genereer daarvan het ID in een variable en verwijder vervolgens het record uit de database. 
         private void BtnRemove_Click(object sender, EventArgs e)
         {
-            // Geef een bevestiging bij het verwijderen. Als er op "Ja" geklikt is wordt het record verwijderd
-            // Als er op "nee" geklikt wordt gebeurd er niks.
-
-
-            // Genereer ID uit 
             int recordId;
             recordId= Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
 
@@ -131,24 +126,27 @@ namespace Login_Sceen
 
                     MessageBox.Show(ex.Message);
                 }
+                PopulateData(); 
                 conn.Close();
             }
         }
 
+        // Open het edit formulier als er dubbelklik gedaan wordt op de juiste rij en stuur het ID door naar het formulier
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            // Open het edit formulier als er dubbelklik gedaan wordt op de juiste rij
             FrmEditLocation frmEditLocation = new FrmEditLocation();
             frmEditLocation.id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+            frmEditLocation.dashboard = this;
             frmEditLocation.ShowDialog();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            // haal data opnieuw op zodra er op de knop update wordt geklikt
+            // haalt data opnieuw op zodra er op de knop update wordt geklikt
             PopulateData();
         }
 
+        // Stuurt de geselecteerde status naar de robot toe middels de berichten "Maintenance", "StartProgram", "StopProgram"
         private void btnChangeState_Click(object sender, EventArgs e)
         {
             MessageBox.Show("De status is veranderd naar " + cbStatus.Text);
@@ -178,6 +176,7 @@ namespace Login_Sceen
             }
         }
 
+        // Stuurt het bericht "reset" naar de robot
         private void btnReset_Click(object sender, EventArgs e)
         {
             DialogResult comfirmation;
@@ -189,13 +188,10 @@ namespace Login_Sceen
                     myEV3.SendMessage("Reset", "0");
                 }
             }
-            else
-            {
-                //No delete
-            }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        // Stuurt het bericht "ReturnHome" naar de robot
+        private void btnReturnTohome_Click(object sender, EventArgs e)
         {
             DialogResult comfirmation;
             comfirmation = MessageBox.Show("Weet u zeker dat de robot teruggestuurd moet worden naar het basisstation?", "Robot Home", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -206,10 +202,6 @@ namespace Login_Sceen
                     myEV3.SendMessage("ReturnHome", "0");
                 }
             }
-            else
-            {
-                //Doe niks
-            }
         }
 
         // Connectie met robot opzetten
@@ -218,7 +210,7 @@ namespace Login_Sceen
             string ipAddress = cbIp.Text;
             if (!IPAddress.TryParse(ipAddress, out IPAddress address))
             {
-                MessageBox.Show("Fill in valid IP address of EV3");
+                MessageBox.Show("Vul een geldig IP adres in");
             }
             else if (myEV3.Connect("1234", ipAddress) == true)
             {
@@ -228,10 +220,11 @@ namespace Login_Sceen
             else
             {
                 myEV3.Disconnect();
-                MessageBox.Show("Failed to connect to EV3 with IP address " + ipAddress);
+                MessageBox.Show("Kan niet verbinden met EV3 met IP address " + ipAddress);
             }
         }
 
+        // Disconnect de robot en update de status. 
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
             myEV3.Disconnect();
@@ -283,4 +276,3 @@ namespace Login_Sceen
         // --------------------------- Einde Handmatige controls ---------------------------//
     }
 }
-

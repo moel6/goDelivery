@@ -14,11 +14,12 @@ using MySql.Data;
 namespace Login_Sceen
 {
 
-    public partial class AddLocation : Form
+    public partial class frmAddLocation : Form
     {
         MySqlConnection conn = new MySqlConnection(@"Server=localhost;  Uid=root; Database=dbi422354; Pwd=;SslMode=none");
+        public FrmDashboard dashboard;
 
-        public AddLocation()
+        public frmAddLocation()
         {
             InitializeComponent();
         }
@@ -53,6 +54,7 @@ namespace Login_Sceen
                 {
                     if (insert.ExecuteNonQuery() == 2)
                     {
+                        dashboard.PopulateData(); //force refresh
                         this.Close();
                     }
                     else
@@ -63,10 +65,9 @@ namespace Login_Sceen
                 }
                 catch (Exception ex)
                 {
-
                     MessageBox.Show(ex.Message);
                 }
-                conn.Close();
+
             }
         }
 

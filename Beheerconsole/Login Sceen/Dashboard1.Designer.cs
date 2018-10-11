@@ -1,6 +1,6 @@
 ﻿namespace Login_Sceen
 {
-    partial class Dashboard1
+    partial class FrmDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -218,7 +218,7 @@
             this.btnRtHome.TabIndex = 6;
             this.btnRtHome.Text = "Return Home";
             this.btnRtHome.UseVisualStyleBackColor = true;
-            this.btnRtHome.Click += new System.EventHandler(this.button5_Click);
+            this.btnRtHome.Click += new System.EventHandler(this.btnReturnTohome_Click);
             // 
             // progressBar1
             // 

@@ -87,10 +87,11 @@
             // 
             // cbRole
             // 
+            this.cbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRole.FormattingEnabled = true;
             this.cbRole.Items.AddRange(new object[] {
-            "Bewoner",
-            "Administrator"});
+            "bewoner",
+            "administrator"});
             this.cbRole.Location = new System.Drawing.Point(110, 81);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(100, 21);
@@ -118,6 +119,7 @@
             // 
             this.tbPassword.Location = new System.Drawing.Point(110, 55);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(100, 20);
             this.tbPassword.TabIndex = 1;
             // 
@@ -152,12 +154,13 @@
             // 
             // cbColor
             // 
+            this.cbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbColor.FormattingEnabled = true;
             this.cbColor.Items.AddRange(new object[] {
-            "Rood",
-            "Geel",
-            "Blauw",
-            "Groen"});
+            "rood",
+            "geel",
+            "blauw",
+            "groen"});
             this.cbColor.Location = new System.Drawing.Point(320, 51);
             this.cbColor.Name = "cbColor";
             this.cbColor.Size = new System.Drawing.Size(100, 21);
@@ -203,15 +206,15 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.ComboBox cbRole;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelss;
         public System.Windows.Forms.TextBox tbPassword;
         public System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Button BtnLocationSub;
         public System.Windows.Forms.NumericUpDown nubNumber;
-        public System.Windows.Forms.ComboBox cbColor;
         private System.Windows.Forms.Label LbColor;
         private System.Windows.Forms.Label LbHouseNumber;
+        protected System.Windows.Forms.ComboBox cbRole;
+        protected System.Windows.Forms.ComboBox cbColor;
     }
 }

@@ -14,6 +14,8 @@ namespace Login_Sceen
     public partial class FrmEditLocation : Form
     {
         public int id;
+        public FrmDashboard dashboard;
+
         MySqlConnection conn = new MySqlConnection(@"Server=localhost;  Uid=root; Database=dbi422354; Pwd=;SslMode=none");
 
         public FrmEditLocation()
@@ -32,16 +34,21 @@ namespace Login_Sceen
             return administratiegegevens; 
         }
 
+        // Haalt input uit database en geeft vervolgens de gewenste waarde in een string 
+        public string celToString(string input)
+        {
+            return input = PopulateData().Tables[0].Rows[0][input].ToString();
+        }
+
         private void editLocation_Load(object sender, EventArgs e)
         {
             // ID wordt meegegegeven vanuit dashboard. 
             PopulateData();
-            string username = PopulateData().Tables[0].Rows[0]["username"].ToString();
-            string password = PopulateData().Tables[0].Rows[0]["password"].ToString();
-            string role = PopulateData().Tables[0].Rows[0]["rol"].ToString();
-            string number = PopulateData().Tables[0].Rows[0]["appartmentnummer"].ToString();
-            string color = PopulateData().Tables[0].Rows[0]["kleur"].ToString();
-
+            string username = celToString("username");
+            string password = celToString("password");
+            string role = celToString("rol");
+            string number = celToString("appartmentnummer");
+            string color = celToString("kleur");
 
             tbUsername.Text = username;
             tbPassword.Text = password;
@@ -71,6 +78,7 @@ namespace Login_Sceen
             {
                 if (update.ExecuteNonQuery() == 2)
                 {
+                    dashboard.PopulateData(); //force refresh
                     this.Close();
                 }
                 else

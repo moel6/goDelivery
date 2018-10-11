@@ -26,7 +26,7 @@ namespace Login_Sceen
             // invoer van textboxes en rol moet "admin" zijn in database. Om te voorkomen dat bewoners in het adminpanel kunnen. 
             string username = tbUsername.Text;
             string password = tbPassword.Text;
-            string role = "admin";
+            string role = "administrator";
 
             // Haal logingegevens op en stop deze in een tijdelijke tabel. 
             MySqlDataAdapter loginCheck = new MySqlDataAdapter("select count(*) from account where rol = '" + role + "'and username = '" + username + "' and password = '" + password + "'", conn);
@@ -45,7 +45,7 @@ namespace Login_Sceen
                 if (dtAccounts.Rows[0][0].ToString() == "1") 
                 {
                     InitializeComponent();
-                    var Dashboard = new Dashboard1();
+                    var Dashboard = new FrmDashboard();
                     Dashboard.Show();
                     this.Hide();
                 }
