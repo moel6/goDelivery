@@ -327,11 +327,11 @@
             // lbStatusState
             // 
             this.lbStatusState.AutoSize = true;
-            this.lbStatusState.Location = new System.Drawing.Point(92, 20);
+            this.lbStatusState.Location = new System.Drawing.Point(86, 20);
             this.lbStatusState.Name = "lbStatusState";
-            this.lbStatusState.Size = new System.Drawing.Size(37, 13);
+            this.lbStatusState.Size = new System.Drawing.Size(59, 13);
             this.lbStatusState.TabIndex = 14;
-            this.lbStatusState.Text = "Status";
+            this.lbStatusState.Text = "niet gestart";
             // 
             // label16
             // 
@@ -531,13 +531,13 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Dashboard1
+            // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 504);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Dashboard1";
+            this.Name = "FrmDashboard";
             this.Text = "Dashboard";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Dashboard1_FormClosed_1);
             this.Load += new System.EventHandler(this.Dashboard1_Load_1);

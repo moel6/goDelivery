@@ -49,30 +49,44 @@ namespace Login_Sceen
             conn.Close();
         }
 
+        // Methode voor het versturen van commando's naar EV3 Robot
+        public void SendEv3Command(string command)
+        {
+           if (myEV3.isConnected)
+            {
+                myEV3.SendMessage(command, "0");
+                libDebug.Items.Add(DebugListItem("Commando " + command));
+            }
+        }
+
+        // Voeg een item toe aan de debug list met tijd 
+        public string DebugListItem(string text)
+        {
+            return DateTime.Now.ToString("h:mm:ss tt") + "  - " + text;
+        }
+
+
         // update connectieinformatie binnen gehele applicatie
         private void UpdateButtonsAndConnectionInfo()
         {
             bool isConnected = myEV3.isConnected;
-
             btnConnect.Enabled = !isConnected;
             btnDisconnect.Enabled = isConnected;
 
             if (isConnected)
             {
-                string disconnectDebug = DateTime.Now.ToString("h:mm:ss tt")+ "  - Connected";
-                libDebug.Items.Add(disconnectDebug);
-                lbConnectState.Text = "disconnected";
-                cbStatus.Text = "disconnected";
+                libDebug.Items.Add(DebugListItem("Connected"));
+                lbConnectState.Text = "connected";
+                cbStatus.Text = "connected";
                 gbStatus.Visible = true;
             }
             else
             {
-                string disconnectedDebug = DateTime.Now.ToString("h:mm:ss tt" ) +"  - Disconnected";
                 lbConnectState.Text = "disconnected";
-                libDebug.Items.Add(disconnectedDebug);
+                libDebug.Items.Add(DebugListItem("Disconnected"));
             }
         }
-            
+        
         // Sluit applicatie als er op kruisje wordt geklikt
         private void Dashboard1_FormClosed_1(object sender, FormClosedEventArgs e)
         {
@@ -153,26 +167,23 @@ namespace Login_Sceen
             if (cbStatus.Text == "onderhoud")
             {
                 gbRemoteControl.Visible = true;
-                if (myEV3.isConnected)
-                {
-                    myEV3.SendMessage("Maintenance", "0");
-                }
+                lbStatusState.Text = "onderhoud";
+                SendEv3Command("Maintenance");
+                libDebug.Items.Add(DebugListItem("onderhoudmodus gestart"));
             }
             else if (cbStatus.Text == "start bezorging")
             {
                 gbRemoteControl.Visible = false;
-                if (myEV3.isConnected)
-                {
-                    myEV3.SendMessage("StartProgram", "0");
-                }
+                lbStatusState.Text = "bezorging gestart";
+                SendEv3Command("StartProgram");
+                libDebug.Items.Add(DebugListItem("bezorging gestart"));
             }
             else if (cbStatus.Text == "stop bezorging")
             {
                 gbRemoteControl.Visible = false;
-                if (myEV3.isConnected)
-                {
-                    myEV3.SendMessage("StopProgram", "0");
-                }
+                lbStatusState.Text = "bezorging gestopt";
+                SendEv3Command("StopProgram");
+                libDebug.Items.Add(DebugListItem("bezorging gestopt"));
             }
         }
 
@@ -183,10 +194,7 @@ namespace Login_Sceen
             comfirmation = MessageBox.Show("Weet u zeker dat de robot moet worden gestopt?", "Robot stop!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (comfirmation == DialogResult.OK)
             {
-                if (myEV3.isConnected)
-                {
-                    myEV3.SendMessage("Reset", "0");
-                }
+                SendEv3Command("Reset");
             }
         }
 
@@ -197,10 +205,7 @@ namespace Login_Sceen
             comfirmation = MessageBox.Show("Weet u zeker dat de robot teruggestuurd moet worden naar het basisstation?", "Robot Home", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (comfirmation == DialogResult.OK)
             {
-                if (myEV3.isConnected)
-                {
-                    myEV3.SendMessage("ReturnHome", "0");
-                }
+                SendEv3Command("ReturnHome");
             }
         }
 
@@ -246,33 +251,25 @@ namespace Login_Sceen
         // --------------------------- Handmatige Controls ---------------------------//
         private void btnForward_Click(object sender, EventArgs e)
         {
-            if (myEV3.isConnected)
-            {
-                myEV3.SendMessage("Forward", "0");  
-            }
+            SendEv3Command("Forward");
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (myEV3.isConnected)
-            {
-                myEV3.SendMessage("Backward", "0");  
-            }
+            SendEv3Command("Backward");
         }
-        private void btnRight_Click(object sender, EventArgs e)
-        {
-            if (myEV3.isConnected)
-            {
-                myEV3.SendMessage("Right", "0"); 
-            }
-        }
+
         private void btnLeft_Click(object sender, EventArgs e)
         {
-            if (myEV3.isConnected)
-            {
-                myEV3.SendMessage("Left", "0"); 
-            }
+            SendEv3Command("Left");
         }
+
+        private void btnRight_Click(object sender, EventArgs e)
+        {
+            SendEv3Command("Right");
+            
+        }
+
         // --------------------------- Einde Handmatige controls ---------------------------//
     }
 }
