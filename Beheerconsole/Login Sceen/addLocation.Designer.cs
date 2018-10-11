@@ -71,7 +71,7 @@
             this.btnCancel.Location = new System.Drawing.Point(272, 139);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 13;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -94,7 +94,7 @@
             this.cbRole.Location = new System.Drawing.Point(110, 81);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(100, 21);
-            this.cbRole.TabIndex = 11;
+            this.cbRole.TabIndex = 2;
             // 
             // label1
             // 
@@ -119,21 +119,21 @@
             this.tbPassword.Location = new System.Drawing.Point(110, 55);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(100, 20);
-            this.tbPassword.TabIndex = 8;
+            this.tbPassword.TabIndex = 1;
             // 
             // tbUsername
             // 
             this.tbUsername.Location = new System.Drawing.Point(110, 28);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(100, 20);
-            this.tbUsername.TabIndex = 7;
+            this.tbUsername.TabIndex = 0;
             // 
             // BtnLocationSub
             // 
             this.BtnLocationSub.Location = new System.Drawing.Point(362, 139);
             this.BtnLocationSub.Name = "BtnLocationSub";
             this.BtnLocationSub.Size = new System.Drawing.Size(75, 23);
-            this.BtnLocationSub.TabIndex = 6;
+            this.BtnLocationSub.TabIndex = 5;
             this.BtnLocationSub.Text = "Verstuur";
             this.BtnLocationSub.UseVisualStyleBackColor = true;
             this.BtnLocationSub.Click += new System.EventHandler(this.BtnLocationSub_Click);
@@ -148,7 +148,7 @@
             0});
             this.nubNumber.Name = "nubNumber";
             this.nubNumber.Size = new System.Drawing.Size(100, 20);
-            this.nubNumber.TabIndex = 5;
+            this.nubNumber.TabIndex = 3;
             // 
             // cbColor
             // 
@@ -161,7 +161,7 @@
             this.cbColor.Location = new System.Drawing.Point(320, 51);
             this.cbColor.Name = "cbColor";
             this.cbColor.Size = new System.Drawing.Size(100, 21);
-            this.cbColor.TabIndex = 1;
+            this.cbColor.TabIndex = 4;
             // 
             // LbColor
             // 

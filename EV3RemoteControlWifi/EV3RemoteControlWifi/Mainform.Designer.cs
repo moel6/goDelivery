@@ -62,10 +62,9 @@
             // 
             // buttonForward
             // 
-            this.buttonForward.Location = new System.Drawing.Point(167, 18);
-            this.buttonForward.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonForward.Location = new System.Drawing.Point(125, 15);
             this.buttonForward.Name = "buttonForward";
-            this.buttonForward.Size = new System.Drawing.Size(87, 49);
+            this.buttonForward.Size = new System.Drawing.Size(65, 40);
             this.buttonForward.TabIndex = 1;
             this.buttonForward.Text = "Forward";
             this.buttonForward.UseVisualStyleBackColor = true;
@@ -77,21 +76,18 @@
             this.sendMessageGroupBox.Controls.Add(this.buttonLeft);
             this.sendMessageGroupBox.Controls.Add(this.buttonRight);
             this.sendMessageGroupBox.Controls.Add(this.buttonForward);
-            this.sendMessageGroupBox.Location = new System.Drawing.Point(13, 129);
-            this.sendMessageGroupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.sendMessageGroupBox.Location = new System.Drawing.Point(10, 105);
             this.sendMessageGroupBox.Name = "sendMessageGroupBox";
-            this.sendMessageGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.sendMessageGroupBox.Size = new System.Drawing.Size(399, 192);
+            this.sendMessageGroupBox.Size = new System.Drawing.Size(299, 156);
             this.sendMessageGroupBox.TabIndex = 2;
             this.sendMessageGroupBox.TabStop = false;
             this.sendMessageGroupBox.Text = "EV3 Move";
             // 
             // buttonBackward
             // 
-            this.buttonBackward.Location = new System.Drawing.Point(167, 117);
-            this.buttonBackward.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBackward.Location = new System.Drawing.Point(125, 95);
             this.buttonBackward.Name = "buttonBackward";
-            this.buttonBackward.Size = new System.Drawing.Size(87, 49);
+            this.buttonBackward.Size = new System.Drawing.Size(65, 40);
             this.buttonBackward.TabIndex = 4;
             this.buttonBackward.Text = "Backward";
             this.buttonBackward.UseVisualStyleBackColor = true;
@@ -99,10 +95,9 @@
             // 
             // buttonLeft
             // 
-            this.buttonLeft.Location = new System.Drawing.Point(60, 68);
-            this.buttonLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonLeft.Location = new System.Drawing.Point(45, 55);
             this.buttonLeft.Name = "buttonLeft";
-            this.buttonLeft.Size = new System.Drawing.Size(87, 49);
+            this.buttonLeft.Size = new System.Drawing.Size(65, 40);
             this.buttonLeft.TabIndex = 3;
             this.buttonLeft.Text = "Left";
             this.buttonLeft.UseVisualStyleBackColor = true;
@@ -110,10 +105,9 @@
             // 
             // buttonRight
             // 
-            this.buttonRight.Location = new System.Drawing.Point(267, 68);
-            this.buttonRight.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRight.Location = new System.Drawing.Point(200, 55);
             this.buttonRight.Name = "buttonRight";
-            this.buttonRight.Size = new System.Drawing.Size(87, 54);
+            this.buttonRight.Size = new System.Drawing.Size(65, 44);
             this.buttonRight.TabIndex = 2;
             this.buttonRight.Text = "Right";
             this.buttonRight.UseVisualStyleBackColor = true;
@@ -126,11 +120,9 @@
             this.connectionGroupBox.Controls.Add(this.connectedDeviceLabel);
             this.connectionGroupBox.Controls.Add(this.disconnectButton);
             this.connectionGroupBox.Controls.Add(this.connectButton);
-            this.connectionGroupBox.Location = new System.Drawing.Point(13, 12);
-            this.connectionGroupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.connectionGroupBox.Location = new System.Drawing.Point(10, 10);
             this.connectionGroupBox.Name = "connectionGroupBox";
-            this.connectionGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.connectionGroupBox.Size = new System.Drawing.Size(907, 106);
+            this.connectionGroupBox.Size = new System.Drawing.Size(680, 86);
             this.connectionGroupBox.TabIndex = 3;
             this.connectionGroupBox.TabStop = false;
             this.connectionGroupBox.Text = "Connection";
@@ -138,39 +130,35 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 25);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(58, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 17);
+            this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 12;
             this.label3.Text = "IP address of EV3";
             // 
             // ipAddressBox
             // 
-            this.ipAddressBox.Location = new System.Drawing.Point(60, 44);
-            this.ipAddressBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ipAddressBox.Location = new System.Drawing.Point(45, 36);
             this.ipAddressBox.Name = "ipAddressBox";
-            this.ipAddressBox.Size = new System.Drawing.Size(151, 22);
+            this.ipAddressBox.Size = new System.Drawing.Size(114, 20);
             this.ipAddressBox.TabIndex = 11;
             // 
             // connectedDeviceLabel
             // 
             this.connectedDeviceLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.connectedDeviceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.connectedDeviceLabel.Location = new System.Drawing.Point(573, 25);
-            this.connectedDeviceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.connectedDeviceLabel.Location = new System.Drawing.Point(430, 20);
             this.connectedDeviceLabel.Name = "connectedDeviceLabel";
-            this.connectedDeviceLabel.Size = new System.Drawing.Size(193, 57);
+            this.connectedDeviceLabel.Size = new System.Drawing.Size(145, 47);
             this.connectedDeviceLabel.TabIndex = 10;
             this.connectedDeviceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // disconnectButton
             // 
             this.disconnectButton.Enabled = false;
-            this.disconnectButton.Location = new System.Drawing.Point(407, 62);
-            this.disconnectButton.Margin = new System.Windows.Forms.Padding(4);
+            this.disconnectButton.Location = new System.Drawing.Point(305, 50);
             this.disconnectButton.Name = "disconnectButton";
-            this.disconnectButton.Size = new System.Drawing.Size(100, 28);
+            this.disconnectButton.Size = new System.Drawing.Size(75, 23);
             this.disconnectButton.TabIndex = 9;
             this.disconnectButton.Text = "Disconnect";
             this.disconnectButton.UseVisualStyleBackColor = true;
@@ -178,10 +166,9 @@
             // 
             // connectButton
             // 
-            this.connectButton.Location = new System.Drawing.Point(407, 18);
-            this.connectButton.Margin = new System.Windows.Forms.Padding(4);
+            this.connectButton.Location = new System.Drawing.Point(305, 15);
             this.connectButton.Name = "connectButton";
-            this.connectButton.Size = new System.Drawing.Size(100, 28);
+            this.connectButton.Size = new System.Drawing.Size(75, 23);
             this.connectButton.TabIndex = 7;
             this.connectButton.Text = "Connect";
             this.connectButton.UseVisualStyleBackColor = true;
@@ -193,11 +180,9 @@
             this.receivedDataGroupBox.Controls.Add(this.angleTextBox);
             this.receivedDataGroupBox.Controls.Add(this.label1);
             this.receivedDataGroupBox.Controls.Add(this.distanceTextBox);
-            this.receivedDataGroupBox.Location = new System.Drawing.Point(427, 338);
-            this.receivedDataGroupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.receivedDataGroupBox.Location = new System.Drawing.Point(320, 275);
             this.receivedDataGroupBox.Name = "receivedDataGroupBox";
-            this.receivedDataGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.receivedDataGroupBox.Size = new System.Drawing.Size(493, 92);
+            this.receivedDataGroupBox.Size = new System.Drawing.Size(370, 75);
             this.receivedDataGroupBox.TabIndex = 4;
             this.receivedDataGroupBox.TabStop = false;
             this.receivedDataGroupBox.Text = "EV3 Status";
@@ -205,57 +190,52 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(347, 25);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(260, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 17);
+            this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Angle";
             // 
             // angleTextBox
             // 
-            this.angleTextBox.Location = new System.Drawing.Point(307, 49);
-            this.angleTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.angleTextBox.Location = new System.Drawing.Point(230, 40);
             this.angleTextBox.Name = "angleTextBox";
-            this.angleTextBox.Size = new System.Drawing.Size(119, 22);
+            this.angleTextBox.Size = new System.Drawing.Size(90, 20);
             this.angleTextBox.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 25);
+            this.label1.Location = new System.Drawing.Point(64, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Distance";
             // 
             // distanceTextBox
             // 
-            this.distanceTextBox.Location = new System.Drawing.Point(60, 49);
-            this.distanceTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.distanceTextBox.Location = new System.Drawing.Point(45, 40);
             this.distanceTextBox.Name = "distanceTextBox";
-            this.distanceTextBox.Size = new System.Drawing.Size(119, 22);
+            this.distanceTextBox.Size = new System.Drawing.Size(90, 20);
             this.distanceTextBox.TabIndex = 0;
             // 
             // receivedMessagesGroupBox
             // 
             this.receivedMessagesGroupBox.Controls.Add(this.clearReceivedMessagesButton);
             this.receivedMessagesGroupBox.Controls.Add(this.receivedMessagesListBox);
-            this.receivedMessagesGroupBox.Location = new System.Drawing.Point(427, 129);
-            this.receivedMessagesGroupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.receivedMessagesGroupBox.Location = new System.Drawing.Point(320, 105);
             this.receivedMessagesGroupBox.Name = "receivedMessagesGroupBox";
-            this.receivedMessagesGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.receivedMessagesGroupBox.Size = new System.Drawing.Size(493, 191);
+            this.receivedMessagesGroupBox.Size = new System.Drawing.Size(370, 155);
             this.receivedMessagesGroupBox.TabIndex = 5;
             this.receivedMessagesGroupBox.TabStop = false;
             this.receivedMessagesGroupBox.Text = "EV3 message receive";
             // 
             // clearReceivedMessagesButton
             // 
-            this.clearReceivedMessagesButton.Location = new System.Drawing.Point(20, 148);
-            this.clearReceivedMessagesButton.Margin = new System.Windows.Forms.Padding(4);
+            this.clearReceivedMessagesButton.Location = new System.Drawing.Point(15, 120);
             this.clearReceivedMessagesButton.Name = "clearReceivedMessagesButton";
-            this.clearReceivedMessagesButton.Size = new System.Drawing.Size(467, 28);
+            this.clearReceivedMessagesButton.Size = new System.Drawing.Size(350, 23);
             this.clearReceivedMessagesButton.TabIndex = 2;
             this.clearReceivedMessagesButton.Text = "Clear";
             this.clearReceivedMessagesButton.UseVisualStyleBackColor = true;
@@ -264,21 +244,17 @@
             // receivedMessagesListBox
             // 
             this.receivedMessagesListBox.FormattingEnabled = true;
-            this.receivedMessagesListBox.ItemHeight = 16;
-            this.receivedMessagesListBox.Location = new System.Drawing.Point(20, 25);
-            this.receivedMessagesListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.receivedMessagesListBox.Location = new System.Drawing.Point(15, 20);
             this.receivedMessagesListBox.Name = "receivedMessagesListBox";
-            this.receivedMessagesListBox.Size = new System.Drawing.Size(465, 116);
+            this.receivedMessagesListBox.Size = new System.Drawing.Size(350, 95);
             this.receivedMessagesListBox.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(427, 443);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(320, 360);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(493, 62);
+            this.groupBox1.Size = new System.Drawing.Size(370, 50);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Info";
@@ -287,9 +263,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 25);
+            this.label4.Location = new System.Drawing.Point(25, 20);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(172, 20);
+            this.label4.Size = new System.Drawing.Size(151, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Version 0.1 9/26/18";
             // 
@@ -297,21 +274,18 @@
             // 
             this.groupBox2.Controls.Add(this.buttonSend);
             this.groupBox2.Controls.Add(this.commandBox);
-            this.groupBox2.Location = new System.Drawing.Point(13, 338);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(10, 275);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(400, 166);
+            this.groupBox2.Size = new System.Drawing.Size(300, 135);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "EV3 message send";
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(153, 92);
-            this.buttonSend.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSend.Location = new System.Drawing.Point(115, 75);
             this.buttonSend.Name = "buttonSend";
-            this.buttonSend.Size = new System.Drawing.Size(100, 28);
+            this.buttonSend.Size = new System.Drawing.Size(75, 23);
             this.buttonSend.TabIndex = 1;
             this.buttonSend.Text = "Send";
             this.buttonSend.UseVisualStyleBackColor = true;
@@ -319,24 +293,22 @@
             // 
             // commandBox
             // 
-            this.commandBox.Location = new System.Drawing.Point(13, 49);
-            this.commandBox.Margin = new System.Windows.Forms.Padding(4);
+            this.commandBox.Location = new System.Drawing.Point(10, 40);
             this.commandBox.Name = "commandBox";
-            this.commandBox.Size = new System.Drawing.Size(372, 22);
+            this.commandBox.Size = new System.Drawing.Size(280, 20);
             this.commandBox.TabIndex = 0;
             // 
             // Mainform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 516);
+            this.ClientSize = new System.Drawing.Size(701, 419);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.receivedMessagesGroupBox);
             this.Controls.Add(this.receivedDataGroupBox);
             this.Controls.Add(this.connectionGroupBox);
             this.Controls.Add(this.sendMessageGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Mainform";
             this.Text = "EV3 Remote Control Wifi";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Mainform_FormClosed);

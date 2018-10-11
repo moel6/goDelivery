@@ -45,7 +45,6 @@ namespace EV3RemoteControlWifi
             UpdateButtonsAndConnectionInfo();
         }
 
-
         private void connectButton_Click(object sender, EventArgs e)
         {
             string ipAddress = ipAddressBox.Text;
@@ -66,14 +65,12 @@ namespace EV3RemoteControlWifi
             }
         }
 
-
         private void disconnectButton_Click(object sender, EventArgs e)
         {
             messageReceiveTimer.Stop();
             myEV3.Disconnect();
             UpdateButtonsAndConnectionInfo();
         }
-
 
         private void UpdateButtonsAndConnectionInfo()
         {
@@ -94,12 +91,10 @@ namespace EV3RemoteControlWifi
             }
         }
 
-
         private void clearReceivedMessagesButton_Click(object sender, EventArgs e)
         {
             receivedMessagesListBox.Items.Clear();
         }
-
 
         // EV3: This method is the event handler for the messageReadTimer.
         //      The method is called when the timer has reached its 'interval' value.
@@ -132,7 +127,6 @@ namespace EV3RemoteControlWifi
             }
         }
 
-
         // EV3: This method sends the "Forward" message to the EV3.
         private void sendForwardButton_Click(object sender, EventArgs e)
         {
@@ -142,7 +136,6 @@ namespace EV3RemoteControlWifi
                 myEV3.SendMessage("Forward", "0");  // "0" means EV3_INBOX0
             }
         }
-
 
         // EV3: This method sends the "Backward" message to the EV3.
         private void sendBackwardButton_Click(object sender, EventArgs e)
@@ -154,7 +147,6 @@ namespace EV3RemoteControlWifi
             }
         }
 
-
         // EV3: This method sends the "Left" message to the EV3.
         private void sendLeftButton_Click(object sender, EventArgs e)
         {
@@ -165,7 +157,6 @@ namespace EV3RemoteControlWifi
             }
         }
 
-
         // EV3: This method sends the "Right" message to the EV3.
         private void sendRightButton_Click(object sender, EventArgs e)
         {
@@ -175,7 +166,6 @@ namespace EV3RemoteControlWifi
                 myEV3.SendMessage("Right", "0");  // "0" means EV3_INBOX0
             }
         }
-
 
         // EV3: This method sends the text typed in the 'EV3 message send' box to the EV3.
         //      This can be used for test purposes.
@@ -199,7 +189,5 @@ namespace EV3RemoteControlWifi
                 myEV3.Disconnect();
             }
         }
-
-       
     }
 }

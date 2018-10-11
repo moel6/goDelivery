@@ -44,6 +44,7 @@
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(100, 20);
             this.tbUsername.TabIndex = 0;
+            this.tbUsername.Text = "admin";
             // 
             // tbPassword
             // 
@@ -52,6 +53,7 @@
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(100, 20);
             this.tbPassword.TabIndex = 1;
+            this.tbPassword.Text = "admin";
             // 
             // LbUsername
             // 
@@ -76,7 +78,7 @@
             this.BtnLogin.Location = new System.Drawing.Point(133, 98);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(75, 23);
-            this.BtnLogin.TabIndex = 4;
+            this.BtnLogin.TabIndex = 2;
             this.BtnLogin.Text = "Inloggen";
             this.BtnLogin.UseVisualStyleBackColor = true;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click_1);
@@ -101,7 +103,7 @@
             this.BtnCancel.Location = new System.Drawing.Point(52, 98);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(75, 23);
-            this.BtnCancel.TabIndex = 5;
+            this.BtnCancel.TabIndex = 3;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = true;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);

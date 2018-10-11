@@ -28,24 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnDisconnect = new System.Windows.Forms.Button();
+            this.btnConnect = new System.Windows.Forms.Button();
+            this.lbConnectState = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbIp = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.gbRemoteControl = new System.Windows.Forms.GroupBox();
+            this.btnLeft = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
+            this.btnRight = new System.Windows.Forms.Button();
+            this.btnForward = new System.Windows.Forms.Button();
+            this.btnRtHome = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,218 +51,198 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.gbStatus = new System.Windows.Forms.GroupBox();
+            this.lbStatusState = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnChangeState = new System.Windows.Forms.Button();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupbox121 = new System.Windows.Forms.GroupBox();
+            this.lbLocation = new System.Windows.Forms.Label();
+            this.lbRuntime = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.libDebug = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.BtnRemove = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gbRemoteControl.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.gbStatus.SuspendLayout();
+            this.groupbox121.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.btnDisconnect);
+            this.groupBox1.Controls.Add(this.btnConnect);
+            this.groupBox1.Controls.Add(this.lbConnectState);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.cbIp);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(185, 241);
+            this.groupBox1.Size = new System.Drawing.Size(185, 102);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Status";
+            this.groupBox1.Text = "Connectie";
             // 
-            // comboBox3
+            // btnDisconnect
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(52, 26);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 2;
-            this.comboBox3.Text = "Robot1";
+            this.btnDisconnect.Location = new System.Drawing.Point(20, 59);
+            this.btnDisconnect.Name = "btnDisconnect";
+            this.btnDisconnect.Size = new System.Drawing.Size(76, 23);
+            this.btnDisconnect.TabIndex = 7;
+            this.btnDisconnect.Text = "Disconnect";
+            this.btnDisconnect.UseVisualStyleBackColor = true;
+            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.Location = new System.Drawing.Point(102, 59);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(77, 23);
+            this.btnConnect.TabIndex = 6;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
+            // lbConnectState
+            // 
+            this.lbConnectState.AutoSize = true;
+            this.lbConnectState.Location = new System.Drawing.Point(92, 16);
+            this.lbConnectState.Name = "lbConnectState";
+            this.lbConnectState.Size = new System.Drawing.Size(73, 13);
+            this.lbConnectState.TabIndex = 5;
+            this.lbConnectState.Text = "Disconnected";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(0, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(86, 13);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Connectiestatus:";
+            // 
+            // cbIp
+            // 
+            this.cbIp.FormattingEnabled = true;
+            this.cbIp.Items.AddRange(new object[] {
+            "192.168.43.108"});
+            this.cbIp.Location = new System.Drawing.Point(48, 32);
+            this.cbIp.Name = "cbIp";
+            this.cbIp.Size = new System.Drawing.Size(121, 21);
+            this.cbIp.TabIndex = 2;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 29);
+            this.label13.Location = new System.Drawing.Point(2, 35);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(39, 13);
             this.label13.TabIndex = 3;
             this.label13.Text = "Robot:";
             // 
-            // pictureBox1
+            // gbRemoteControl
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 99);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 136);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.gbRemoteControl.Controls.Add(this.btnLeft);
+            this.gbRemoteControl.Controls.Add(this.BtnBack);
+            this.gbRemoteControl.Controls.Add(this.btnRight);
+            this.gbRemoteControl.Controls.Add(this.btnForward);
+            this.gbRemoteControl.Location = new System.Drawing.Point(197, 6);
+            this.gbRemoteControl.Name = "gbRemoteControl";
+            this.gbRemoteControl.Size = new System.Drawing.Size(247, 241);
+            this.gbRemoteControl.TabIndex = 1;
+            this.gbRemoteControl.TabStop = false;
+            this.gbRemoteControl.Text = "Emergency Remote Controller";
+            this.gbRemoteControl.Visible = false;
             // 
-            // comboBox1
+            // btnLeft
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(52, 59);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "In dienst";
+            this.btnLeft.Location = new System.Drawing.Point(23, 108);
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.Size = new System.Drawing.Size(70, 23);
+            this.btnLeft.TabIndex = 3;
+            this.btnLeft.Text = "Links";
+            this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
-            // label1
+            // BtnBack
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Status:";
+            this.BtnBack.Location = new System.Drawing.Point(92, 146);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(70, 23);
+            this.BtnBack.TabIndex = 4;
+            this.BtnBack.Text = "Achteruit";
+            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // groupBox2
+            // btnRight
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(197, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(366, 241);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Emergency Remote Controller";
+            this.btnRight.Location = new System.Drawing.Point(159, 108);
+            this.btnRight.Name = "btnRight";
+            this.btnRight.Size = new System.Drawing.Size(70, 23);
+            this.btnRight.TabIndex = 5;
+            this.btnRight.Text = "Rechts";
+            this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
-            // radioButton2
+            // btnForward
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(12, 59);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(39, 17);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Off";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.btnForward.Location = new System.Drawing.Point(92, 71);
+            this.btnForward.Name = "btnForward";
+            this.btnForward.Size = new System.Drawing.Size(70, 23);
+            this.btnForward.TabIndex = 2;
+            this.btnForward.Text = "Vooruit";
+            this.btnForward.UseVisualStyleBackColor = true;
+            this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
             // 
-            // groupBox3
+            // btnRtHome
             // 
-            this.groupBox3.Controls.Add(this.listBox1);
-            this.groupBox3.Location = new System.Drawing.Point(225, 19);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(118, 216);
-            this.groupBox3.TabIndex = 14;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Debug Rapport";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 19);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(106, 186);
-            this.listBox1.TabIndex = 16;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(11, 30);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(39, 17);
-            this.radioButton1.TabIndex = 14;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "On";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(13, 136);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Links";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(82, 174);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Achteruit";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(149, 136);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Rechts";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(82, 99);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Vooruit";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(288, 264);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 64);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Return Home";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnRtHome.Location = new System.Drawing.Point(6, 388);
+            this.btnRtHome.Name = "btnRtHome";
+            this.btnRtHome.Size = new System.Drawing.Size(86, 52);
+            this.btnRtHome.TabIndex = 6;
+            this.btnRtHome.Text = "Return Home";
+            this.btnRtHome.UseVisualStyleBackColor = true;
+            this.btnRtHome.Click += new System.EventHandler(this.button5_Click);
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(131, 344);
+            this.progressBar1.Location = new System.Drawing.Point(133, 70);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(399, 13);
+            this.progressBar1.Size = new System.Drawing.Size(384, 13);
             this.progressBar1.TabIndex = 7;
             this.progressBar1.Value = 30;
             // 
-            // button6
+            // btnReset
             // 
-            this.button6.Location = new System.Drawing.Point(131, 264);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(87, 64);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Reset";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnReset.BackColor = System.Drawing.Color.Red;
+            this.btnReset.Location = new System.Drawing.Point(602, 388);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(87, 52);
+            this.btnReset.TabIndex = 8;
+            this.btnReset.Text = "Noodstop";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 344);
+            this.label2.Location = new System.Drawing.Point(15, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 2;
@@ -273,7 +251,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(536, 344);
+            this.label3.Location = new System.Drawing.Point(523, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 9;
@@ -282,7 +260,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 377);
+            this.label5.Location = new System.Drawing.Point(15, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 13);
             this.label5.TabIndex = 11;
@@ -290,16 +268,16 @@
             // 
             // progressBar2
             // 
-            this.progressBar2.Location = new System.Drawing.Point(131, 377);
+            this.progressBar2.Location = new System.Drawing.Point(133, 93);
             this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(399, 13);
+            this.progressBar2.Size = new System.Drawing.Size(384, 13);
             this.progressBar2.TabIndex = 12;
             this.progressBar2.Value = 75;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(536, 377);
+            this.label6.Location = new System.Drawing.Point(523, 93);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(27, 13);
             this.label6.TabIndex = 13;
@@ -309,32 +287,175 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(581, 426);
+            this.tabControl1.Size = new System.Drawing.Size(709, 485);
             this.tabControl1.TabIndex = 14;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.gbStatus);
+            this.tabPage1.Controls.Add(this.groupbox121);
+            this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.progressBar2);
-            this.tabPage1.Controls.Add(this.progressBar1);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.button6);
-            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.gbRemoteControl);
+            this.tabPage1.Controls.Add(this.btnRtHome);
+            this.tabPage1.Controls.Add(this.btnReset);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(573, 400);
+            this.tabPage1.Size = new System.Drawing.Size(701, 459);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Robot";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // gbStatus
+            // 
+            this.gbStatus.Controls.Add(this.lbStatusState);
+            this.gbStatus.Controls.Add(this.label16);
+            this.gbStatus.Controls.Add(this.btnChangeState);
+            this.gbStatus.Controls.Add(this.cbStatus);
+            this.gbStatus.Controls.Add(this.label1);
+            this.gbStatus.Location = new System.Drawing.Point(6, 114);
+            this.gbStatus.Name = "gbStatus";
+            this.gbStatus.Size = new System.Drawing.Size(185, 126);
+            this.gbStatus.TabIndex = 6;
+            this.gbStatus.TabStop = false;
+            this.gbStatus.Text = "Status";
+            // 
+            // lbStatusState
+            // 
+            this.lbStatusState.AutoSize = true;
+            this.lbStatusState.Location = new System.Drawing.Point(92, 20);
+            this.lbStatusState.Name = "lbStatusState";
+            this.lbStatusState.Size = new System.Drawing.Size(37, 13);
+            this.lbStatusState.TabIndex = 14;
+            this.lbStatusState.Text = "Status";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 20);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(79, 13);
+            this.label16.TabIndex = 13;
+            this.label16.Text = "Huidige Status:";
+            // 
+            // btnChangeState
+            // 
+            this.btnChangeState.Location = new System.Drawing.Point(55, 73);
+            this.btnChangeState.Name = "btnChangeState";
+            this.btnChangeState.Size = new System.Drawing.Size(121, 23);
+            this.btnChangeState.TabIndex = 12;
+            this.btnChangeState.Text = "Verander Status";
+            this.btnChangeState.UseVisualStyleBackColor = true;
+            this.btnChangeState.Click += new System.EventHandler(this.btnChangeState_Click);
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Items.AddRange(new object[] {
+            "start bezorging",
+            "stop bezorging",
+            "onderhoud"});
+            this.cbStatus.Location = new System.Drawing.Point(55, 46);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(121, 21);
+            this.cbStatus.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Status:";
+            // 
+            // groupbox121
+            // 
+            this.groupbox121.Controls.Add(this.lbLocation);
+            this.groupbox121.Controls.Add(this.lbRuntime);
+            this.groupbox121.Controls.Add(this.label15);
+            this.groupbox121.Controls.Add(this.label18);
+            this.groupbox121.Controls.Add(this.progressBar2);
+            this.groupbox121.Controls.Add(this.label2);
+            this.groupbox121.Controls.Add(this.label3);
+            this.groupbox121.Controls.Add(this.label6);
+            this.groupbox121.Controls.Add(this.progressBar1);
+            this.groupbox121.Controls.Add(this.label5);
+            this.groupbox121.Location = new System.Drawing.Point(6, 253);
+            this.groupbox121.Name = "groupbox121";
+            this.groupbox121.Size = new System.Drawing.Size(683, 129);
+            this.groupbox121.TabIndex = 16;
+            this.groupbox121.TabStop = false;
+            this.groupbox121.Text = "status";
+            // 
+            // lbLocation
+            // 
+            this.lbLocation.AutoSize = true;
+            this.lbLocation.Location = new System.Drawing.Point(130, 47);
+            this.lbLocation.Name = "lbLocation";
+            this.lbLocation.Size = new System.Drawing.Size(35, 13);
+            this.lbLocation.TabIndex = 19;
+            this.lbLocation.Text = "status";
+            // 
+            // lbRuntime
+            // 
+            this.lbRuntime.AutoSize = true;
+            this.lbRuntime.Location = new System.Drawing.Point(130, 24);
+            this.lbRuntime.Name = "lbRuntime";
+            this.lbRuntime.Size = new System.Drawing.Size(35, 13);
+            this.lbRuntime.TabIndex = 18;
+            this.lbRuntime.Text = "status";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(15, 47);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(84, 13);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Huidige Locatie:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(15, 24);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(49, 13);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "Runtime:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnClear);
+            this.groupBox3.Controls.Add(this.libDebug);
+            this.groupBox3.Location = new System.Drawing.Point(453, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(242, 241);
+            this.groupBox3.TabIndex = 15;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Debug Rapport";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(6, 211);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(230, 23);
+            this.btnClear.TabIndex = 17;
+            this.btnClear.Text = "Maak leeg";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // libDebug
+            // 
+            this.libDebug.FormattingEnabled = true;
+            this.libDebug.Location = new System.Drawing.Point(6, 19);
+            this.libDebug.Name = "libDebug";
+            this.libDebug.Size = new System.Drawing.Size(230, 186);
+            this.libDebug.TabIndex = 16;
             // 
             // tabPage2
             // 
@@ -342,7 +463,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(573, 400);
+            this.tabPage2.Size = new System.Drawing.Size(701, 459);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Administratie";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -355,10 +476,20 @@
             this.groupBox4.Controls.Add(this.BtnRemove);
             this.groupBox4.Location = new System.Drawing.Point(18, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(549, 367);
+            this.groupBox4.Size = new System.Drawing.Size(677, 447);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Locaties";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(573, 18);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(98, 23);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Update Data";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // dataGridView1
             // 
@@ -372,7 +503,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(526, 290);
+            this.dataGridView1.Size = new System.Drawing.Size(665, 385);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
@@ -396,140 +527,15 @@
             this.BtnRemove.UseVisualStyleBackColor = true;
             this.BtnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 
-            // tabPage3
+            // timer1
             // 
-            this.tabPage3.Controls.Add(this.groupBox9);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.groupBox8);
-            this.tabPage3.Controls.Add(this.comboBox2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(573, 400);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Robot Overzicht";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.label12);
-            this.groupBox9.Controls.Add(this.button9);
-            this.groupBox9.Location = new System.Drawing.Point(279, 45);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(267, 225);
-            this.groupBox9.TabIndex = 8;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Add New Robot";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 30);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(21, 13);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "ID:";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(100, 196);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "Add Robot";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 21);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Robot:";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.label11);
-            this.groupBox8.Controls.Add(this.label10);
-            this.groupBox8.Controls.Add(this.label9);
-            this.groupBox8.Controls.Add(this.label8);
-            this.groupBox8.Controls.Add(this.label7);
-            this.groupBox8.Location = new System.Drawing.Point(6, 45);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(267, 225);
-            this.groupBox8.TabIndex = 1;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "ID Robot";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 149);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 13);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Energy level:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 119);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Runtime:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 85);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Status:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 57);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Current location:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "ID:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(51, 18);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(222, 21);
-            this.comboBox2.TabIndex = 0;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(434, 18);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(98, 23);
-            this.btnUpdate.TabIndex = 6;
-            this.btnUpdate.Text = "Update Data";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Dashboard1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 450);
+            this.ClientSize = new System.Drawing.Size(728, 504);
             this.Controls.Add(this.tabControl1);
             this.Name = "Dashboard1";
             this.Text = "Dashboard";
@@ -537,22 +543,17 @@
             this.Load += new System.EventHandler(this.Dashboard1_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
+            this.gbRemoteControl.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.gbStatus.ResumeLayout(false);
+            this.gbStatus.PerformLayout();
+            this.groupbox121.ResumeLayout(false);
+            this.groupbox121.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -560,27 +561,20 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.GroupBox gbRemoteControl;
+        private System.Windows.Forms.Button btnLeft;
+        private System.Windows.Forms.Button BtnBack;
+        private System.Windows.Forms.Button btnRight;
+        private System.Windows.Forms.Button btnForward;
+        private System.Windows.Forms.Button btnRtHome;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbIp;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -588,19 +582,26 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button BtnRemove;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnConnect;
+        private System.Windows.Forms.Label lbConnectState;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ListBox libDebug;
+        private System.Windows.Forms.GroupBox groupbox121;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbLocation;
+        private System.Windows.Forms.Label lbRuntime;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.GroupBox gbStatus;
+        private System.Windows.Forms.Label lbStatusState;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnChangeState;
+        private System.Windows.Forms.ComboBox cbStatus;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDisconnect;
     }
 }

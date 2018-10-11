@@ -44,7 +44,6 @@ namespace Login_Sceen
                 // Als gegevens juist zijn laat het dashboard zien
                 if (dtAccounts.Rows[0][0].ToString() == "1") 
                 {
-                    MessageBox.Show("Juiste inloggegevens");
                     InitializeComponent();
                     var Dashboard = new Dashboard1();
                     Dashboard.Show();
