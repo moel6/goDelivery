@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 using MySql.Data; 
 
 namespace Login_Sceen
@@ -16,8 +17,10 @@ namespace Login_Sceen
 
     public partial class frmAddLocation : Form
     {
-        MySqlConnection conn = new MySqlConnection(@"Server=localhost;  Uid=root; Database=dbi422354; Pwd=;SslMode=none");
         public FrmDashboard dashboard;
+
+        // Connectiegegevens voor database opgehaald uit app.config
+        MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
 
         public frmAddLocation()
         {
@@ -45,6 +48,7 @@ namespace Login_Sceen
             {
                 MessageBox.Show("Controleer de gegevens, een of meerdere velden zijn niet juist ingevuld","Onvolledige gegevens");
             }
+
             else
             {
                 conn.Open();
@@ -67,7 +71,6 @@ namespace Login_Sceen
                 {
                     MessageBox.Show(ex.Message);
                 }
-
             }
         }
 

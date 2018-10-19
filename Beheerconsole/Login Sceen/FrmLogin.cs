@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace Login_Sceen
 {
     public partial class fmLogin : Form
     {
-        // Zet MySQL Connectie op LET OP: Nu op localhost)
-        MySqlConnection conn = new MySqlConnection(@"Server=localhost;  Uid=root; Database=dbi422354; Pwd=;SslMode=none");
+        // Connectiegegevens voor database opgehaald uit app.config
+        MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
 
         public fmLogin()
         {

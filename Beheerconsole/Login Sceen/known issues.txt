@@ -1,8 +1,5 @@
-
 Musts:
-- Administratiemodule updaten na insert. 
-- Resultaten verwijderen op basis van ID. 
-- Resultaten updaten op basis van ID.
+- Koppeling robot C 
 
-Coulds:
-- Beveiligingsmelding bij aanmaken administrator. 
+Coulds
+- Administrator vaste kleur en huisnummer geven.

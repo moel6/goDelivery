@@ -10,17 +10,20 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Net;
 using EV3WifiLib;
-
+using System.Configuration;
+using System.Collections.Specialized;
 
 namespace Login_Sceen
 {
+
+
     public partial class FrmDashboard : Form
     {
         private EV3Wifi myEV3;
         private Timer messageReceiveTimer;
 
-        // Connectiegegevens voor database
-        MySqlConnection conn = new MySqlConnection(@"Server=localhost;  Uid=root; Database=dbi422354; Pwd=;SslMode=none");
+        // Connectiegegevens voor database opgehaald uit app.config
+        MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
 
         public FrmDashboard()
         {
