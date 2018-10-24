@@ -191,7 +191,7 @@
             this.ClientSize = new System.Drawing.Size(500, 206);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAddLocation";
-            this.Text = "Locatie toevoegen";
+            this.Text = "Toevoegen";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nubNumber)).EndInit();

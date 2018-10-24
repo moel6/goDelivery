@@ -188,10 +188,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 246);
+            this.ClientSize = new System.Drawing.Size(500, 214);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmEditLocation";
-            this.Text = "Bewerk";
+            this.Text = "Bewerken";
             this.Load += new System.EventHandler(this.editLocation_Load);
             this.Shown += new System.EventHandler(this.editLocation_Load);
             this.groupBox1.ResumeLayout(false);

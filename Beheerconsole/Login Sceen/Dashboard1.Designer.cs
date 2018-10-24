@@ -479,7 +479,7 @@
             this.groupBox4.Size = new System.Drawing.Size(677, 447);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Locaties";
+            this.groupBox4.Text = "Bewoners";
             // 
             // btnUpdate
             // 
