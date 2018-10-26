@@ -141,7 +141,7 @@
             // 
             this.cbIp.FormattingEnabled = true;
             this.cbIp.Items.AddRange(new object[] {
-            "192.168.43.108"});
+            "192.168.43.250"});
             this.cbIp.Location = new System.Drawing.Point(48, 32);
             this.cbIp.Name = "cbIp";
             this.cbIp.Size = new System.Drawing.Size(121, 21);
@@ -323,6 +323,7 @@
             this.gbStatus.TabIndex = 6;
             this.gbStatus.TabStop = false;
             this.gbStatus.Text = "Status";
+            this.gbStatus.Visible = false;
             // 
             // lbStatusState
             // 

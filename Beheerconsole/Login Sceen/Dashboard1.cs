@@ -45,7 +45,7 @@ namespace Login_Sceen
         // Functie voor het ophalen van data vanuit database. 
         public void PopulateData()
         {
-            MySqlDataAdapter showFromDatabase = new MySqlDataAdapter("SELECT account.id_account,account.username, account.rol, administratie.appartmentnummer, administratie.kleur FROM account INNER JOIN administratie ON account_id_account = account.id_account", conn);
+            MySqlDataAdapter showFromDatabase = new MySqlDataAdapter("SELECT account.id_account,account.username, account.rol, administratie.appartmentnummer, administratie.kleur, beschikbaarheid FROM account INNER JOIN administratie ON account_id_account = account.id_account", conn);
             DataSet administratieGegevens = new DataSet();
             showFromDatabase.Fill(administratieGegevens);
             dataGridView1.DataSource = administratieGegevens.Tables[0];
@@ -172,21 +172,21 @@ namespace Login_Sceen
                 gbRemoteControl.Visible = true;
                 lbStatusState.Text = "onderhoud";
                 SendEv3Command("Maintenance");
-                libDebug.Items.Add(DebugListItem("onderhoudmodus gestart"));
+                libDebug.Items.Add(DebugListItem("Onderhoudmodus gestart"));
             }
             else if (cbStatus.Text == "start bezorging")
             {
                 gbRemoteControl.Visible = false;
                 lbStatusState.Text = "bezorging gestart";
                 SendEv3Command("StartProgram");
-                libDebug.Items.Add(DebugListItem("bezorging gestart"));
+                libDebug.Items.Add(DebugListItem("Bezorging gestart"));
             }
             else if (cbStatus.Text == "stop bezorging")
             {
                 gbRemoteControl.Visible = false;
                 lbStatusState.Text = "bezorging gestopt";
                 SendEv3Command("StopProgram");
-                libDebug.Items.Add(DebugListItem("bezorging gestopt"));
+                libDebug.Items.Add(DebugListItem("Bezorging gestopt"));
             }
         }
 
@@ -237,12 +237,26 @@ namespace Login_Sceen
         {
             myEV3.Disconnect();
             UpdateButtonsAndConnectionInfo();
+            gbStatus.Visible = false; 
         }
 
-        // Timer voor vernieuwen messages
+        // Timer voor ophalen messages
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            if (myEV3.isConnected)
+            {
+                string strMessage = myEV3.ReceiveMessage("EV3_OUTBOX0");
+                if (strMessage != "")
+                {
+                    string[] data = strMessage.Split(' ');
+                    if (data.Length == 2)
+                    {
+                       //  receivedMessagesListBox.Items.Add(data[0] + " " + data[1]);
+                       // distanceTextBox.Text = data[0];
+                        // angleTextBox.Text = data[1];
+                    }
+                }
+            }
         }
 
         // Maak debug list leeg

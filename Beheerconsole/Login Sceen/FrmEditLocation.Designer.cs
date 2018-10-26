@@ -41,12 +41,16 @@
             this.cbColor = new System.Windows.Forms.ComboBox();
             this.LbColor = new System.Windows.Forms.Label();
             this.LbHouseNumber = new System.Windows.Forms.Label();
+            this.cbBeschikbaarheid = new System.Windows.Forms.ComboBox();
+            this.lbaksk = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nubNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbaksk);
+            this.groupBox1.Controls.Add(this.cbBeschikbaarheid);
             this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbRole);
@@ -184,6 +188,27 @@
             this.LbHouseNumber.TabIndex = 3;
             this.LbHouseNumber.Text = "Huisnummer";
             // 
+            // cbBeschikbaarheid
+            // 
+            this.cbBeschikbaarheid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBeschikbaarheid.FormattingEnabled = true;
+            this.cbBeschikbaarheid.Items.AddRange(new object[] {
+            "beschikbaar",
+            "afwezig"});
+            this.cbBeschikbaarheid.Location = new System.Drawing.Point(320, 78);
+            this.cbBeschikbaarheid.Name = "cbBeschikbaarheid";
+            this.cbBeschikbaarheid.Size = new System.Drawing.Size(100, 21);
+            this.cbBeschikbaarheid.TabIndex = 13;
+            // 
+            // lbaksk
+            // 
+            this.lbaksk.AutoSize = true;
+            this.lbaksk.Location = new System.Drawing.Point(232, 78);
+            this.lbaksk.Name = "lbaksk";
+            this.lbaksk.Size = new System.Drawing.Size(86, 13);
+            this.lbaksk.TabIndex = 14;
+            this.lbaksk.Text = "Beschikbaarheid";
+            // 
             // FrmEditLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,5 +241,7 @@
         private System.Windows.Forms.Label LbHouseNumber;
         protected System.Windows.Forms.ComboBox cbRole;
         protected System.Windows.Forms.ComboBox cbColor;
+        private System.Windows.Forms.Label lbaksk;
+        protected System.Windows.Forms.ComboBox cbBeschikbaarheid;
     }
 }

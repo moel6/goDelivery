@@ -41,12 +41,16 @@
             this.cbColor = new System.Windows.Forms.ComboBox();
             this.LbColor = new System.Windows.Forms.Label();
             this.LbHouseNumber = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbBeschikbaarheid = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nubNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbBeschikbaarheid);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbRole);
@@ -142,7 +146,7 @@
             // 
             // nubNumber
             // 
-            this.nubNumber.Location = new System.Drawing.Point(320, 29);
+            this.nubNumber.Location = new System.Drawing.Point(337, 25);
             this.nubNumber.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -161,7 +165,7 @@
             "geel",
             "blauw",
             "groen"});
-            this.cbColor.Location = new System.Drawing.Point(320, 51);
+            this.cbColor.Location = new System.Drawing.Point(337, 51);
             this.cbColor.Name = "cbColor";
             this.cbColor.Size = new System.Drawing.Size(100, 21);
             this.cbColor.TabIndex = 4;
@@ -169,7 +173,7 @@
             // LbColor
             // 
             this.LbColor.AutoSize = true;
-            this.LbColor.Location = new System.Drawing.Point(232, 51);
+            this.LbColor.Location = new System.Drawing.Point(243, 51);
             this.LbColor.Name = "LbColor";
             this.LbColor.Size = new System.Drawing.Size(31, 13);
             this.LbColor.TabIndex = 4;
@@ -178,11 +182,32 @@
             // LbHouseNumber
             // 
             this.LbHouseNumber.AutoSize = true;
-            this.LbHouseNumber.Location = new System.Drawing.Point(232, 28);
+            this.LbHouseNumber.Location = new System.Drawing.Point(243, 27);
             this.LbHouseNumber.Name = "LbHouseNumber";
             this.LbHouseNumber.Size = new System.Drawing.Size(65, 13);
             this.LbHouseNumber.TabIndex = 3;
             this.LbHouseNumber.Text = "Huisnummer";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(242, 81);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Beschikbaarheid:";
+            // 
+            // cbBeschikbaarheid
+            // 
+            this.cbBeschikbaarheid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBeschikbaarheid.FormattingEnabled = true;
+            this.cbBeschikbaarheid.Items.AddRange(new object[] {
+            "beschikbaar",
+            "afwezig"});
+            this.cbBeschikbaarheid.Location = new System.Drawing.Point(337, 78);
+            this.cbBeschikbaarheid.Name = "cbBeschikbaarheid";
+            this.cbBeschikbaarheid.Size = new System.Drawing.Size(100, 21);
+            this.cbBeschikbaarheid.TabIndex = 14;
             // 
             // frmAddLocation
             // 
@@ -214,5 +239,7 @@
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cbBeschikbaarheid;
+        private System.Windows.Forms.Label label3;
     }
 }

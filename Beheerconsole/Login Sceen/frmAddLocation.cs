@@ -34,6 +34,7 @@ namespace Login_Sceen
             string role = cbRole.Text;
             string number = Convert.ToString(nubNumber.Value);
             string color = cbColor.Text;
+            string beschikbaarheid = cbBeschikbaarheid.Text; 
 
             // Genereerd aanmaaktijd. 
             string timeAndDate = DateTime.Now.ToString("MM/dd/yyyy h:mm tt");
@@ -41,8 +42,8 @@ namespace Login_Sceen
             // Query voor het invoegen van waarden uit formulier.
             string insertQuery = 
                 "INSERT INTO account (account.username, account.password, account.rol, account.account_sinds) VALUES('"+username+"', '"+password + "', '"+ role + "', '"+timeAndDate+"');" +
-                "INSERT INTO administratie(administratie.account_id_account, administratie.appartmentnummer, administratie.kleur)" +
-                "VALUES(LAST_INSERT_ID(), '"+number+ "', '"+color+ "'); ";
+                "INSERT INTO administratie(administratie.account_id_account, administratie.appartmentnummer, administratie.kleur, beschikbaarheid)" +
+                "VALUES(LAST_INSERT_ID(), '"+number+ "', '"+color+ "', '" + beschikbaarheid + "'); ";
 
             if (username == "" || password == "" || role == "" || number =="" || color == "")
             {
