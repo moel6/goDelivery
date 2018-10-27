@@ -141,7 +141,7 @@
             // 
             this.cbIp.FormattingEnabled = true;
             this.cbIp.Items.AddRange(new object[] {
-            "192.168.43.250"});
+            "192.168.43.3"});
             this.cbIp.Location = new System.Drawing.Point(48, 32);
             this.cbIp.Name = "cbIp";
             this.cbIp.Size = new System.Drawing.Size(121, 21);

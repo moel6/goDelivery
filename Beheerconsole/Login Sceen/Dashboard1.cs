@@ -15,8 +15,6 @@ using System.Collections.Specialized;
 
 namespace Login_Sceen
 {
-
-
     public partial class FrmDashboard : Form
     {
         private EV3Wifi myEV3;
