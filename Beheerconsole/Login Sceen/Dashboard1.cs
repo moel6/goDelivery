@@ -26,8 +26,6 @@ namespace Login_Sceen
         public FrmDashboard()
         {
 
-   
-
             InitializeComponent();
             // Create the Timer object and set it to generate a timer tick event 
             // every 100 milliseconds. The timer tick can be used to execute code at fixed intervals.
@@ -53,6 +51,8 @@ namespace Login_Sceen
             conn.Close();
         }
 
+
+        // Haal op welke bewoners er beschikbaar zijn. Return deze in een samengestelde sting middels comma's.
         public string GetAvailabilty()
         {
             MySqlDataAdapter ShowFromAvailabilty = new MySqlDataAdapter("select kleur from administratie where beschikbaarheid = 'beschikbaar'", conn);
@@ -187,7 +187,6 @@ namespace Login_Sceen
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             // haalt data opnieuw op zodra er op de knop update wordt geklikt
-
                        PopulateData();
         }
 
