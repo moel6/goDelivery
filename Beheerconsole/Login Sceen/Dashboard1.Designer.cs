@@ -58,7 +58,8 @@
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupbox121 = new System.Windows.Forms.GroupBox();
-            this.lbLocation = new System.Windows.Forms.Label();
+            this.lbBattery = new System.Windows.Forms.Label();
+            this.lbState = new System.Windows.Forms.Label();
             this.lbRuntime = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -272,16 +273,15 @@
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(384, 13);
             this.progressBar2.TabIndex = 12;
-            this.progressBar2.Value = 75;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(523, 93);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 13);
+            this.label6.Size = new System.Drawing.Size(21, 13);
             this.label6.TabIndex = 13;
-            this.label6.Text = "75%";
+            this.label6.Text = "0%";
             // 
             // tabControl1
             // 
@@ -323,7 +323,6 @@
             this.gbStatus.TabIndex = 6;
             this.gbStatus.TabStop = false;
             this.gbStatus.Text = "Status";
-            this.gbStatus.Visible = false;
             // 
             // lbStatusState
             // 
@@ -376,7 +375,8 @@
             // 
             // groupbox121
             // 
-            this.groupbox121.Controls.Add(this.lbLocation);
+            this.groupbox121.Controls.Add(this.lbBattery);
+            this.groupbox121.Controls.Add(this.lbState);
             this.groupbox121.Controls.Add(this.lbRuntime);
             this.groupbox121.Controls.Add(this.label15);
             this.groupbox121.Controls.Add(this.label18);
@@ -393,14 +393,23 @@
             this.groupbox121.TabStop = false;
             this.groupbox121.Text = "status";
             // 
-            // lbLocation
+            // lbBattery
             // 
-            this.lbLocation.AutoSize = true;
-            this.lbLocation.Location = new System.Drawing.Point(130, 47);
-            this.lbLocation.Name = "lbLocation";
-            this.lbLocation.Size = new System.Drawing.Size(35, 13);
-            this.lbLocation.TabIndex = 19;
-            this.lbLocation.Text = "status";
+            this.lbBattery.AutoSize = true;
+            this.lbBattery.Location = new System.Drawing.Point(315, 20);
+            this.lbBattery.Name = "lbBattery";
+            this.lbBattery.Size = new System.Drawing.Size(35, 13);
+            this.lbBattery.TabIndex = 20;
+            this.lbBattery.Text = "label4";
+            // 
+            // lbState
+            // 
+            this.lbState.AutoSize = true;
+            this.lbState.Location = new System.Drawing.Point(130, 47);
+            this.lbState.Name = "lbState";
+            this.lbState.Size = new System.Drawing.Size(35, 13);
+            this.lbState.TabIndex = 19;
+            this.lbState.Text = "status";
             // 
             // lbRuntime
             // 
@@ -416,9 +425,9 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(15, 47);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(84, 13);
+            this.label15.Size = new System.Drawing.Size(77, 13);
             this.label15.TabIndex = 17;
-            this.label15.Text = "Huidige Locatie:";
+            this.label15.Text = "Huidige status:";
             // 
             // label18
             // 
@@ -592,7 +601,7 @@
         private System.Windows.Forms.ListBox libDebug;
         private System.Windows.Forms.GroupBox groupbox121;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label lbLocation;
+        private System.Windows.Forms.Label lbState;
         private System.Windows.Forms.Label lbRuntime;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Timer timer1;
@@ -604,5 +613,6 @@
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDisconnect;
+        private System.Windows.Forms.Label lbBattery;
     }
 }

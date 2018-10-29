@@ -25,6 +25,9 @@ namespace Login_Sceen
 
         public FrmDashboard()
         {
+
+   
+
             InitializeComponent();
             // Create the Timer object and set it to generate a timer tick event 
             // every 100 milliseconds. The timer tick can be used to execute code at fixed intervals.
@@ -48,6 +51,30 @@ namespace Login_Sceen
             showFromDatabase.Fill(administratieGegevens);
             dataGridView1.DataSource = administratieGegevens.Tables[0];
             conn.Close();
+        }
+
+        public string GetAvailabilty()
+        {
+            MySqlDataAdapter ShowFromAvailabilty = new MySqlDataAdapter("select kleur from administratie where beschikbaarheid = 'beschikbaar'", conn);
+            DataSet AvailabiltyData = new DataSet();
+            ShowFromAvailabilty.Fill(AvailabiltyData);
+
+            int x = AvailabiltyData.Tables[0].Rows.Count;
+
+
+            string[] strdetailID = new string[x];
+            
+            for (int i = 0; i < x; i++)
+            {
+                strdetailID[i] = AvailabiltyData.Tables[0].Rows[i]["kleur"].ToString();
+            }
+
+            conn.Close();
+
+            string avString = String.Join(",", strdetailID);
+            return avString;
+
+
         }
 
         // Methode voor het versturen van commando's naar EV3 Robot
@@ -121,6 +148,8 @@ namespace Login_Sceen
                 string updateQuery = "DELETE FROM administratie WHERE administratie.account_id_account = '" + recordId + "';" +
                 "DELETE FROM account WHERE account.id_account = '" + recordId + "'; ";
 
+
+
                 conn.Open();
                 MySqlCommand update = new MySqlCommand(updateQuery, conn);
 
@@ -141,7 +170,7 @@ namespace Login_Sceen
 
                     MessageBox.Show(ex.Message);
                 }
-                PopulateData(); 
+                PopulateData();
                 conn.Close();
             }
         }
@@ -158,7 +187,8 @@ namespace Login_Sceen
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             // haalt data opnieuw op zodra er op de knop update wordt geklikt
-            PopulateData();
+
+                       PopulateData();
         }
 
         // Stuurt de geselecteerde status naar de robot toe middels de berichten "Maintenance", "StartProgram", "StopProgram"
@@ -178,6 +208,8 @@ namespace Login_Sceen
                 lbStatusState.Text = "bezorging gestart";
                 SendEv3Command("StartProgram");
                 libDebug.Items.Add(DebugListItem("Bezorging gestart"));
+                myEV3.SendMessage(GetAvailabilty(), "0");
+                Console.WriteLine(GetAvailabilty()); // laat beschikbare bewoners zien
             }
             else if (cbStatus.Text == "stop bezorging")
             {
@@ -247,11 +279,12 @@ namespace Login_Sceen
                 if (strMessage != "")
                 {
                     string[] data = strMessage.Split(' ');
-                    if (data.Length == 2)
+                    if (data.Length == 3)
                     {
-                       //  receivedMessagesListBox.Items.Add(data[0] + " " + data[1]);
-                       // distanceTextBox.Text = data[0];
-                        // angleTextBox.Text = data[1];
+                        lbState.Text = data[0];
+                        lbRuntime.Text = data[1];
+                        progressBar2.Value = Convert.ToInt32(data[2]);
+                        label6.Text = data[2] + "%";
                     }
                 }
             }
