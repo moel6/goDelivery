@@ -58,7 +58,6 @@
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupbox121 = new System.Windows.Forms.GroupBox();
-            this.lbBattery = new System.Windows.Forms.Label();
             this.lbState = new System.Windows.Forms.Label();
             this.lbRuntime = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -375,7 +374,6 @@
             // 
             // groupbox121
             // 
-            this.groupbox121.Controls.Add(this.lbBattery);
             this.groupbox121.Controls.Add(this.lbState);
             this.groupbox121.Controls.Add(this.lbRuntime);
             this.groupbox121.Controls.Add(this.label15);
@@ -392,15 +390,6 @@
             this.groupbox121.TabIndex = 16;
             this.groupbox121.TabStop = false;
             this.groupbox121.Text = "status";
-            // 
-            // lbBattery
-            // 
-            this.lbBattery.AutoSize = true;
-            this.lbBattery.Location = new System.Drawing.Point(315, 20);
-            this.lbBattery.Name = "lbBattery";
-            this.lbBattery.Size = new System.Drawing.Size(35, 13);
-            this.lbBattery.TabIndex = 20;
-            this.lbBattery.Text = "label4";
             // 
             // lbState
             // 
@@ -613,6 +602,5 @@
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDisconnect;
-        private System.Windows.Forms.Label lbBattery;
     }
 }

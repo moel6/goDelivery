@@ -207,7 +207,7 @@ namespace Login_Sceen
                 lbStatusState.Text = "bezorging gestart";
                 SendEv3Command("StartProgram");
                 libDebug.Items.Add(DebugListItem("Bezorging gestart"));
-                myEV3.SendMessage(GetAvailabilty(), "0");
+                myEV3.SendMessage(GetAvailabilty(), "1");
                 Console.WriteLine(GetAvailabilty()); // laat beschikbare bewoners zien
             }
             else if (cbStatus.Text == "stop bezorging")
@@ -278,12 +278,19 @@ namespace Login_Sceen
                 if (strMessage != "")
                 {
                     string[] data = strMessage.Split(' ');
-                    if (data.Length == 3)
+                    if (data.Length == 4)
                     {
                         lbState.Text = data[0];
                         lbRuntime.Text = data[1];
                         progressBar2.Value = Convert.ToInt32(data[2]);
                         label6.Text = data[2] + "%";
+                        int batterystatus = Convert.ToInt32(data[3]);
+                        if (batterystatus > 100)
+                        {
+                            batterystatus = 100;
+                        }
+                        progressBar1.Value = batterystatus;
+                        label3.Text = batterystatus + "%";
                     }
                 }
             }
